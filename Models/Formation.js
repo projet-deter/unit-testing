@@ -31,7 +31,7 @@ class Formation {
           motifs.push("places supérieur à zero ")
         }
         if(motifs.length > 0) return false
-        else return true */
+        else return true 
     }
 }
 
