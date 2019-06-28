@@ -59,5 +59,5 @@ router.delete( '/:id', ( req, res, next ) => {
         .then(() => res.json({ action: true }))
         .catch(err => res.send(err));
 });
-*/
+
 module.exports = router;
