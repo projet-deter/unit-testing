@@ -30,9 +30,8 @@ class Formation {
         if(this.place > 0){
           motifs.push("places supérieur à zero ")
         }
-console.log(motifs)
         if(motifs.length > 0) return false
-        else return true
+        else return true 
     }
 }
 

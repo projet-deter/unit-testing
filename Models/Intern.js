@@ -10,6 +10,15 @@ const InternSchema = mongoose.Schema({
     },
 });
 
+class Formation {
+
+    isValid(){
+        if(this.age ) return true
+        return false
+    }
+
+}
+
 const Intern = db.model('Intern', InternSchema);
 
 module.exports = Intern;
