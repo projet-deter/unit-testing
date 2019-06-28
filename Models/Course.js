@@ -13,6 +13,8 @@ const FormationSchema = mongoose.Schema({
 
 class Formation {
 
+    
+
 }
 
 FormationSchema.loadClass(Formation)
