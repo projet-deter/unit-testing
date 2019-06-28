@@ -15,6 +15,23 @@ const FormationSchema = mongoose.Schema({
 
 class Formation {
 
+    testIsValid(){
+
+        let motifs = []
+    
+        if(!this.name)
+          motifs.push('pas de nom')
+        if(this.name == "")
+          motifs.push('nom vide')
+        if(!this.categories)
+          motifs.push('pas de catégories')
+        if(this.categories == "")
+          motifs.push('catégorie vide')
+        if(this.place > 0){
+        motifs.push("places supérieur à zero ")
+        }
+
+}
 }
 
 FormationSchema.loadClass(Formation)

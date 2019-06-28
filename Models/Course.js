@@ -14,6 +14,8 @@ const CourseSchema = mongoose.Schema({
 
 class Course {
 
+    
+
 }
 
 CourseSchema.loadClass(Course)
