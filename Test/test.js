@@ -1,5 +1,6 @@
-const Formation = require('../Models/Formation')
 const Intern = require ('../Models/Intern')
+const Formation = require('../Models/Formation')
+const Room = require ('../Models/Room')
 
 /* Intern */
 
@@ -42,4 +43,3 @@ test('Test validité formation false car  la place est égale à 0', () => {
 test('Test validité formation true', () => {
   expect(formation.testIsValid()).toBe(true);
 });
-
