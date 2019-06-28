@@ -1,0 +1,64 @@
+/*
+Instructions:
+-Execute this GET request : http://f4002606.ngrok.io/interns
+-Use the id from the json response
+-Run the tests from the INTERNS section with the previous id
+
+-Execute this GET request : http://f4002606.ngrok.io/teachers
+-Run the tests from the TEACHERS section with the previous id
+
+-Execute this GET request : http://f4002606.ngrok.io/formations
+-Run the tests from the FORMATIONS section with the previous id
+*/
+
+
+////////////////////////////////////////INTERNS/////////////////////////////////////////////////////
+
+//RETRIEVE Intern
+pm.test("response should return the user as proper json when retreiving Intern", function () {
+
+  pm.response.to.have.jsonBody({"_id": "5d165974a042323966130b56","firstname": "Ivan","lastname": "Saah","created_at": "2019-06-28T18:16:20.503Z","__v": 0});
+
+});
+
+//DELETE Intern
+pm.test("response should return a proper json", function () {
+
+  pm.response.to.have.jsonBody({"action": true});
+
+});
+
+////////////////////////////////////////TEACHERS/////////////////////////////////////////////////////
+
+//RETRIEVE Teacher
+pm.test("response should return the user as proper json when retreiving Teacher", function () {
+
+  pm.response.to.have.jsonBody({"_id": "5d165974a042323966130b56","firstname": "Ivan","lastname": "Saah","created_at": "2019-06-28T18:16:20.503Z","__v": 0});
+
+});
+
+//DELETE Intern
+pm.test("response should return a proper json", function () {
+
+  pm.response.to.have.jsonBody({"action": true});
+
+});
+
+////////////////////////////////////////FORMATIONS/////////////////////////////////////////////////////
+
+//RETRIEVE Formations
+pm.test("response should return the user as proper json when retreiving Formation", function () {
+
+  pm.response.to.have.jsonBody({"_id": "5d165b35ce7fc53cb6e4ad83","name": "marc","category": "Saah","places": 7,"created_at": "2019-06-28T18:23:49.175Z","__v": 0});
+
+});
+
+//DELETE Formation
+pm.test("response should return a proper json", function () {
+
+  pm.response.to.have.jsonBody({"action": true});
+
+});
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
