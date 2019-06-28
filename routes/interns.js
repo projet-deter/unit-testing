@@ -27,10 +27,8 @@ router.post('/', (req, res) => {
     Promise
         .resolve()
         .then(() => {
-            if ( !( req.body.title
-                && req.body.description
-                && req.body.link
-                && req.body.categories) ) {
+            if ( !( req.body.firstname
+              && req.body.lastname) ) {
                 throw new Error( 'All fields are required' );
             }
             else {
