@@ -1,69 +1,54 @@
 const express = require('express');
 const router = express.Router();
-/*
-const User = require('../Models/UserSchema');
-const Post = require('../Models/PostSchema');
-const Category = require('../Models/CategorySchema');
-const router = express.Router();
+
+const Formation = require('../Models/Formation');
+const Intern = require('../Models/Intern');
+const Room = require('../Models/Room');
+const Teacher = require('../Models/Teacher');
+const Course = require('../Models/Course');
 
 router.get('/', (req, res) => {
     res.send({ wel: 'come'})
 });
 
 router.get('/populate', (req, res) => {
-    const id = req.params.id
 
     Promise
         .resolve()
         .then(() => {
-            let promises = []
 
-            for(let i=0; i<50; i++) {
-                let categories = [];
-                if(i<10) categories.push('javascript')
-                else if(i<20) categories.push('php')
-                else if(i<30) categories.push('c#')
-                else if(i<40) categories.push('java')
-                else categories.push('docker')
 
-                let post = new Post({
-                    title: `post ${i}`,
-                    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum`,
-                    link: `https://fr.lipsum.com/`,
-                    categories
-                })
+            let formation = new Formation({
+                name: `Faire une API en PHP`,
+                category: `PHP`,
+                places : 35
+            })
 
-                promises.push(post.save())
-            }
+            let formation2 = new Formation({
+                name: `Faire un jeu vidéo avec Unity`,
+                category: `UNITY`,
+                places : 15
+            })
 
-            return Promise.all(promises)
-        })
-        .then(() => {
-            let promises = []
+            let formation3 = new Formation({
+                name: `Les frameworks JS`,
+                category: `JS`,
+                places : 100
+            })
 
-            for(let i=0; i<10; i++) {
-                let user = new User({
-                    pseudo: `pseudo${i}`,
-                    email: `mail${i}@gmail.com`,
-                    password: `azerty`
-                })
+            let formation4 = new Formation({
+                name: `Référencement naturel`,
+                category: `SEO`,
+                places : 35
+            })
 
-                promises.push(user.save())
-            }
+            let formation5 = new Formation({
+                name: `Faire une fonction logarythmique`,
+                category: `MATHS`,
+                places : 10
+            })
 
-            return Promise.all(promises)
-        })
-        .then(() => {
-            let promises = []
-
-            for(let i=0; i<10; i++) {
-                let category = new Category({
-                    title: `cat ${i}`,
-                    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum`
-                })
-
-                promises.push(category.save())
-            }
+            let promises = [formation, formations2, formation3, formation4, formation5]
 
             return Promise.all(promises)
         })
@@ -90,5 +75,5 @@ router.post('/login', (req, res) => {
             }
         });
 });
-*/
+
 module.exports = router;
