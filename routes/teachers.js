@@ -1,15 +1,15 @@
 const express = require('express');
 const router = express.Router();
-/*
-const User = require('../Models/UserSchema');
+
+const Teachers = require('../Models/Teacher');
 
 
 router.get('/', (req, res) => {
 
     Promise
         .resolve()
-        .then(() => User.find())
-        .then(users => res.send(users))
+        .then(() => Teachers.find())
+        .then(teachers => res.send(teachers))
         .catch(err => res.send(err));
 });
 
@@ -18,8 +18,8 @@ router.get('/:id', (req, res) => {
 
     Promise
         .resolve()
-        .then(() => User.findById(id))
-        .then(user => res.send(user))
+        .then(() => Teachers.findById(id))
+        .then(teacher => res.send(teacher))
         .catch(err => res.send(err));
 });
 
@@ -27,15 +27,14 @@ router.post( '/', ( req, res, next ) => {
     Promise
         .resolve()
         .then(() => {
-            if ( !( req.body.email
-                && req.body.password)
-                && req.body.pseudo ) {
+            if ( !( req.body.firstname
+                && req.body.lastname) ) {
                 throw new Error( 'All fields are required' );
             }
         })
         .then(() => {
-            let user = new User(req.body)
-            return user.save()
+            let teacher = new Teachers(req.body)
+            return teacher.save()
         })
         .then( user => res.json( user ) )
         .catch(err => {
@@ -49,9 +48,9 @@ router.delete( '/:id', ( req, res, next ) => {
 
     Promise
         .resolve()
-        .then(() => User.remove({ _id: id }).exec())
+        .then(() => Teachers.remove({ _id: id }).exec())
         .then(() => res.json({ action: true }))
         .catch(next)
 });
-*/
+
 module.exports = router;
