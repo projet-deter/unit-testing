@@ -18,20 +18,22 @@ class Formation {
     testIsValid(){
 
         let motifs = []
-    
+
         if(!this.name)
           motifs.push('pas de nom')
         if(this.name == "")
           motifs.push('nom vide')
-        if(!this.categories)
+        if(!this.category)
           motifs.push('pas de catégories')
-        if(this.categories == "")
+        if(this.category == "")
           motifs.push('catégorie vide')
         if(this.place > 0){
-        motifs.push("places supérieur à zero ")
+          motifs.push("places supérieur à zero ")
         }
-
-}
+console.log(motifs)
+        if(motifs.length > 0) return false
+        else return true
+    }
 }
 
 FormationSchema.loadClass(Formation)
