@@ -1,9 +1,7 @@
-const createToken = require('../lib/auth').createToken;
-
 const express = require('express');
-const User = require('../Models/UserSchema');
-const Post = require('../Models/PostSchema');
-const Category = require('../Models/CategorySchema');
+// const User = require('../Models/UserSchema');
+// const Post = require('../Models/PostSchema');
+// const Category = require('../Models/CategorySchema');
 const router = express.Router();
 
 router.get('/', (req, res) => {

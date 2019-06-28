@@ -1,5 +1,5 @@
 const express = require('express');
-const Category = require('../Models/CategorySchema');
+// const Category = require('../Models/CategorySchema');
 const router = express.Router();
 
 router.get('/', (req, res) => {

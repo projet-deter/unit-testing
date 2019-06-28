@@ -1,7 +1,7 @@
 const express = require('express');
-const Post = require('../Models/PostSchema');
+// const Post = require('../Models/PostSchema');
 const router = express.Router();
-const Pagination = require('../lib/Pagination')
+// const Pagination = require('../lib/Pagination')
 
 router.get('/', (req, res) => {
 
