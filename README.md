@@ -15,4 +15,4 @@ npm run test
 
 # Tests d'intégration
 
-./test/integration.json
+./test/integration.txt
