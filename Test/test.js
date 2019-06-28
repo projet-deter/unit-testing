@@ -25,3 +25,4 @@ test('Test validité formation false car  la place est égale à 0', () => {
 test('Test validité formation true', () => {
   expect(formation.testIsValid()).toBe(true);
 });
+
