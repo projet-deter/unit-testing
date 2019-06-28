@@ -5,7 +5,7 @@ const Schema = mongoose.Schema
 
 const FormationSchema = mongoose.Schema({
     name: String,
-    categories: String,
+    category: String,
     places: Number,
     created_at: {
         type: Date,

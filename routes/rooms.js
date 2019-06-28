@@ -1,16 +1,14 @@
 const express = require('express');
 const router = express.Router();
-/*
-const express = require('express');
-const Category = require('../Models/CategorySchema');
+const Room = require('../Models/Room');
 
 
 router.get('/', (req, res) => {
 
     Promise
         .resolve()
-        .then(() => Category.find())
-        .then(categories => res.send(categories))
+        .then(() => Room.find())
+        .then(room => res.send(room))
         .catch(err => res.send(err));
 });
 
@@ -19,8 +17,8 @@ router.get('/:id', (req, res) => {
 
     Promise
         .resolve()
-        .then(() => Category.findById(id))
-        .then(category => res.send(category))
+        .then(() => Room.findById(id))
+        .then(room => res.send(room))
         .catch(err => res.send(err));
 });
 
@@ -34,11 +32,11 @@ router.post('/', (req, res) => {
                 throw new Error( 'All fields are required' );
             }
             else {
-                let category = new Category(req.body)
-                return category.save()
+                let room = new Room(req.body)
+                return room.save()
             }
         })
-        .then( category => res.json( category ) )
+        .then( room => res.json( room ) )
         .catch(err => res.send(err));
 });
 
@@ -47,9 +45,9 @@ router.delete( '/:id', ( req, res, next ) => {
 
     Promise
         .resolve()
-        .then(() => Category.remove({ _id: id }).exec())
+        .then(() => Room.remove({ _id: id }).exec())
         .then(() => res.json({ action: true }))
         .catch(err => res.send(err));
 });
-*/
+
 module.exports = router;

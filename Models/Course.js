@@ -3,20 +3,21 @@ const db = require('../lib/db');
 
 const Schema = mongoose.Schema
 
-const FormationSchema = mongoose.Schema({
-    room: { type: Schema.Types.ObjectId, ref: 'Intern' },
-    teacher: [{ type: Schema.Types.ObjectId, ref: 'Teacher' }],
+const CourseSchema = mongoose.Schema({
+    room: { type: Schema.Types.ObjectId, ref: 'Room' },
+    teacher: { type: Schema.Types.ObjectId, ref: 'Teacher' },
+    formation: { type: Schema.Types.ObjectId, ref: 'Formation' },
     interns: [{ type: Schema.Types.ObjectId, ref: 'Intern' }],
     begin: { type: Date },
     end: { type: Date },
 });
 
-class Formation {
+class Course {
 
 }
 
-FormationSchema.loadClass(Formation)
+CourseSchema.loadClass(Course)
 
-const FormationModel = db.model('Formation', FormationSchema);
+const CourseModel = db.model('Course', CourseSchema);
 
-module.exports = FormationModel;
+module.exports = CourseModel;

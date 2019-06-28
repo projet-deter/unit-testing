@@ -1,15 +1,20 @@
 const express = require('express');
 const router = express.Router();
-/*
-const Category = require('../Models/CategorySchema');
-const router = express.Router();
+
+
+const Formation = require('../Models/Formation');
+const Intern = require('../Models/Intern');
+const Room = require('../Models/Room');
+const Teacher = require('../Models/Teacher');
+const Course = require('../Models/Course');
+
 
 router.get('/', (req, res) => {
 
     Promise
         .resolve()
-        .then(() => Category.find())
-        .then(categories => res.send(categories))
+        .then(() => Course.find())
+        .then(courses => res.send(courses))
         .catch(err => res.send(err));
 });
 
@@ -18,8 +23,8 @@ router.get('/:id', (req, res) => {
 
     Promise
         .resolve()
-        .then(() => Category.findById(id))
-        .then(category => res.send(category))
+        .then(() => Course.findById(id))
+        .then(course => res.send(course))
         .catch(err => res.send(err));
 });
 
@@ -28,16 +33,20 @@ router.post('/', (req, res) => {
     Promise
         .resolve()
         .then(() => {
-            if ( !( req.body.title
-                && req.body.description) ) {
+            if ( !( req.body.room
+                && req.body.teacher
+                && req.body.formation
+                && req.body.interns
+                && req.body.begin
+                && req.body.end) ) {
                 throw new Error( 'All fields are required' );
             }
             else {
-                let category = new Category(req.body)
-                return category.save()
+                let course = new Course(req.body)
+                return course.save()
             }
         })
-        .then( category => res.json( category ) )
+        .then( course => res.json( course ) )
         .catch(err => res.send(err));
 });
 
@@ -46,7 +55,7 @@ router.delete( '/:id', ( req, res, next ) => {
 
     Promise
         .resolve()
-        .then(() => Category.remove({ _id: id }).exec())
+        .then(() => Course.remove({ _id: id }).exec())
         .then(() => res.json({ action: true }))
         .catch(err => res.send(err));
 });
