@@ -12,16 +12,19 @@ test("Test validité user true", () => {
 test("Test validité room false car nom vide", () => {
   room.name = "";
   expect(room.testIsValid()).toBe(false);
+  room.name = "A22";
 });
 
 test("Test validité room false car place inferieur a 0 ", () => {
   room.places = -3;
   expect(room.testIsValid()).toBe(false);
+  room.places = 12;
 });
 
 test("Test validité room false car nombre de place vide", () => {
   room.places = "";
   expect(room.testIsValid()).toBe(false);
+  room.places = 33;
 });
 
 test("Test validité room false car nombre de place vide", () => {

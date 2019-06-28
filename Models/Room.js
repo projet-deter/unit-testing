@@ -20,9 +20,12 @@ class Room {
     if (this.name == "") motifs.push("nom vide");
     if (!this.places) motifs.push("pas de numero de places");
     if (this.places == "") motifs.push("numéro vide");
-    if (this.places > 0) {
-      motifs.push("Numero supérieur à zero ");
+    if (this.places < 1) {
+      motifs.push("Numero inférieur à zero ");
     }
+
+    if(motifs.length > 0) return false
+    else return true
   }
 }
 

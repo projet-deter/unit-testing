@@ -27,11 +27,12 @@ class Formation {
           motifs.push('pas de catégories')
         if(this.category == "")
           motifs.push('catégorie vide')
-        if(this.place > 0){
-          motifs.push("places supérieur à zero ")
+        if(this.places < 1){
+          motifs.push("places inféreure à zero ")
         }
+
         if(motifs.length > 0) return false
-        else return true 
+        else return true
     }
 }
 
