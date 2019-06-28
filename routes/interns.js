@@ -1,7 +1,9 @@
 const express = require('express');
-// const Post = require('../Models/PostSchema');
 const router = express.Router();
-// const Pagination = require('../lib/Pagination')
+/*
+const Post = require('../Models/PostSchema');
+
+const Pagination = require('../lib/Pagination')
 
 router.get('/', (req, res) => {
 
@@ -90,6 +92,6 @@ router.delete( '/:id', ( req, res, next ) => {
         .catch(err => res.send(err));
 });
 
-
+*/
 
 module.exports = router;

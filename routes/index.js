@@ -1,7 +1,9 @@
 const express = require('express');
-// const User = require('../Models/UserSchema');
-// const Post = require('../Models/PostSchema');
-// const Category = require('../Models/CategorySchema');
+const router = express.Router();
+/*
+const User = require('../Models/UserSchema');
+const Post = require('../Models/PostSchema');
+const Category = require('../Models/CategorySchema');
 const router = express.Router();
 
 router.get('/', (req, res) => {
@@ -88,5 +90,5 @@ router.post('/login', (req, res) => {
             }
         });
 });
-
+*/
 module.exports = router;

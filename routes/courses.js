@@ -1,5 +1,7 @@
 const express = require('express');
-// const Category = require('../Models/CategorySchema');
+const router = express.Router();
+/*
+const Category = require('../Models/CategorySchema');
 const router = express.Router();
 
 router.get('/', (req, res) => {
@@ -48,5 +50,5 @@ router.delete( '/:id', ( req, res, next ) => {
         .then(() => res.json({ action: true }))
         .catch(err => res.send(err));
 });
-
+*/
 module.exports = router;

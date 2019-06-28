@@ -1,6 +1,8 @@
 const express = require('express');
-// const User = require('../Models/UserSchema');
 const router = express.Router();
+/*
+const User = require('../Models/UserSchema');
+
 
 router.get('/', (req, res) => {
 
@@ -51,5 +53,5 @@ router.delete( '/:id', ( req, res, next ) => {
         .then(() => res.json({ action: true }))
         .catch(next)
 });
-
+*/
 module.exports = router;
